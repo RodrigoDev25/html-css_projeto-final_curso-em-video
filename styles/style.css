@@ -60,3 +60,126 @@ nav#menu a:hover {
     background-color: var(--detaque-inverso);
     color: var(--destaque);
 }
+
+main {
+    display: grid;
+    grid-template-columns: auto 90vw auto;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+section#ficha {
+    background-color: var(--fundo-card);
+    padding: 20px;
+    border-radius: 8px;
+    grid-column: 2;
+}
+
+section#ficha img.foto {
+    width: 200px;
+    /* dimensiona. ex: 9/16 */
+    aspect-ratio: 1/1;
+    /* "esconde" sobra*/
+    overflow: hidden;
+    border: 5px solid var(--fundo-card);
+    border-radius: 50%;
+    outline: 5px solid var(--destaque);
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: var(--destaque);
+    margin: 15px 0;
+    font-size: 1.8;
+    text-align: center;
+}
+
+div#social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    margin-top: 10px;
+}
+
+div#social .iconesContato {
+    font-size: 3em;
+    color: var(--texto);
+    transition: color 0.3s;
+}
+
+div#social .iconesContato:hover {
+    color: var(--detaque-inverso);
+}
+
+
+section#detalhes {
+    grid-column: 2;
+}
+
+article {
+    background-color: var(--fundo-card);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+article h2 {
+    color: var(--destaque);
+    margin-bottom: 10px;
+}
+
+#skill-conteiner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 15px 0;
+}
+
+#skill-conteiner .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#skill-conteiner .nome {
+    font-weight: bold;
+    color: var(--texto);
+}
+
+#skill-conteiner .porcent {
+    font-weight: bold;
+    color: var(--destaque);
+}
+
+#skill-conteiner .barra {
+    width: 100%;
+    height: 8px;
+    background-color: var(--fundo-principal);
+    border-radius: 4px;
+}
+
+#skill-conteiner .progresso {
+    height: 100%;
+    background-color: var(--detaque-inverso);
+    border-radius: 4px;
+}
+
+#linuxIcone {
+    display: inline;
+    font-size: 1.4em;
+} 
+
+#jsIcone {
+    display: inline;
+    font-size: 1.3em;
+} 
+
+@media screen and (min-width: 768px) {
+    #skill-conteiner {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+    
