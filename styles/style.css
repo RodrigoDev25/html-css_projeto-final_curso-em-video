@@ -21,7 +21,7 @@
     --texto: #222222;
     --texto-inverso: #ffffff;
     --destaque: #0a3666;
-    --detaque-inverso: #66bbff;
+    --detaque-inverso: #418ac7;
     --fundo-card: #ffffff;
 }
 
@@ -170,16 +170,107 @@ article h2 {
 #linuxIcone {
     display: inline;
     font-size: 1.4em;
-} 
+}
 
 #jsIcone {
     display: inline;
     font-size: 1.3em;
-} 
+}
+
+#formacao-conteiner {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 12px;
+}
+
+#formacao-conteiner .curso {
+    background-color: var(--fundo-principal);
+    border-radius: 8px;
+    border-left: 5px solid var(--detaque-inverso);
+    padding-left: 15px;
+    transition: border-width 0.5s, color 0.3s;
+}
+
+#formacao-conteiner .curso:hover {
+    border-left-width: 10px;
+    border-color: var(--destaque);
+    cursor: pointer;
+}
+
+#formacao-conteiner .periodo {
+    font-size: 0.8;
+    font-weight: bold;
+    color: var(--texto);
+}
+
+#formacao-conteiner .instituicao {
+    color: var(--detaque-inverso);
+    font-size: 1.1em;
+}
+
+#formacao-conteiner .titulacao {
+    color: var(--texto);
+    font-size: 1.1em;
+}
+
+#formacao-conteiner .topicos {
+    padding: 5px 0 10px 35px;
+}
+
+#projeto-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+}
+
+#projeto-container .projeto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--fundo-principal);
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 5px solid var(--detaque-inverso);
+    transition: border-color 0.3s, border-width 0.3s;
+}
+
+#projeto-container .projeto:hover {
+    border-color: var(--destaque);
+    border-left-width: 15px;
+    cursor: pointer;
+}
+
+#projeto-container .foto {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 8px;
+}
 
 @media screen and (min-width: 768px) {
     #skill-conteiner {
         grid-template-columns: 1fr 1fr;
     }
+
+    #formacao-conteiner {
+        max-width: 90%;
+    }
+
+    #projeto-container .projeto {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        max-width: 90%;
+    }
+
+    #projeto-container .projeto-info {
+        max-width: 70%;
+    }
+
+    #projeto-container .foto {
+        aspect-ratio: 1/1;
+        max-width: 20%;
+        max-height: 200px;
+    }
+
 }
-    
